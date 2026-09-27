@@ -32,8 +32,6 @@ export async function PUT(
     } catch (e) {
       return NextResponse.json({ success: true, booking: { id: parseInt(id), status } });
     }
-
-    return NextResponse.json({ success: true, booking: updated });
   } catch (error) {
     console.error('Booking update error:', error);
     return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 });
